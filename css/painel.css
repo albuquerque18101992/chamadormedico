@@ -1,0 +1,143 @@
+::selection {
+	background     : #8d2525 !important;
+	color          : #fff !important;
+	text-decoration: none !important;
+}
+
+body {
+	background-color: #fcfcfc;
+}
+
+.navbar {
+	background-color: #e8e8e8 !important;
+}
+
+.navbar img {
+	width: 200px;
+}
+
+.navbar li {
+	list-style: none;
+}
+
+.navbar a {
+	color    : #071e51;
+	font-size: 15px;
+}
+
+.navbar a:hover {
+	color: #244181;
+
+}
+
+
+.nav {
+	background-color: #f4f4f4 !important;
+}
+
+.nav a {
+	color    : #071e51;
+	font-size: 14px;
+}
+
+.nav .active {
+	background-color: #8d2525 !important;
+}
+
+
+
+.card {
+	width        : 280px;
+	border-radius: 10px;
+	box-shadow   : 0px 2px 2px rgba(0, 0, 0, 0.2);
+	margin       : 0 auto;
+
+}
+
+.card-body {
+	padding-bottom: 2px !important;
+	padding-top   : 10px !important;
+}
+
+.card p {
+	margin : 0;
+	padding: 0;
+
+}
+
+.icone-card {
+	font-size: 70px;
+}
+
+.titulo-card {
+	font-size : 15px;
+	text-align: right;
+
+}
+
+.subtitulo-card {
+	font-size : 40px;
+	text-align: right;
+}
+
+.rodape-card {
+	font-size : 13px;
+	text-align: center;
+
+}
+
+
+.badge {
+	background-color: #4A4A4A !important;
+	color           : #FFF;
+
+}
+
+
+.nav .active .badge {
+	background-color: #FFF !important;
+	color           : #2C2B2B !important;
+}
+
+
+.btn-secondary {
+	background-color: #878787 !important;
+}
+
+.btn-secondary:hover {
+	background-color: #616161 !important;
+}
+
+
+.registro {
+	font-size   : 15px;
+	margin-right: 5px;
+}
+
+
+.botao-novo {
+	margin-bottom: 35px;
+}
+
+
+.paginacao {
+	margin-top: 25px;
+}
+
+.mensagem-sucesso {
+	font-size    : 18px;
+	color        : #008000;
+	background   : #D4EDDA;
+	border-radius: 4px;
+	text-align   : center;
+	font-weight  : bold;
+}
+
+.mensagem-erro {
+	font-size    : 18px;
+	color        : #ff0000;
+	background   : #f8d7da;
+	border-radius: 4px;
+	text-align   : center;
+	font-weight  : bold;
+}
