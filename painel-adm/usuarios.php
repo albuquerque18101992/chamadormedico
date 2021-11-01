@@ -5,7 +5,7 @@ $pagina = 'usuarios';
 <div class="row botao-novo">
 	<div class="col-md-12">
 		<a id="btn-novo" data-toggle="modal" data-target="#modal"></a>
-		<a href="index.php?acao=usuarios&funcao=novo" type="button" class="btn btn-secondary">Novo Usuário</a>
+		<a href="index.php?acao=<?php echo $pagina?>&funcao=novo" type="button" class="btn btn-secondary">Novo Usuário</a>
 	</div>
 </div>
 <div class="row mt-4">

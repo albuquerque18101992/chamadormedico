@@ -9,7 +9,7 @@ $telefone = $_POST['telefone'];
 $email = $_POST['email'];
 
 //VERIFICAR SE O MÉDICO JÁ ESTÁ CADASTRADO
-$result_medicos = $pdo->query("SELECT * FROM medicos WHERE cpf = '$cpf'");
+$result_medicos = $pdo->query("SELECT * FROM medicos WHERE cpf = '$cpf' OR crm = '$crm'");
 $dados_medicos = $result_medicos->fetchAll(PDO::FETCH_ASSOC);
 $medicos = count($dados_medicos);
 if ($medicos == 0) {
