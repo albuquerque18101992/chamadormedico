@@ -148,6 +148,46 @@
 	}
 	?>
 
+
+	<!--CHAMADA DA MODAL DELETAR -->
+	<?php
+	if (@$_GET['funcao'] == 'excluir') {
+		$id = $_GET['id'];
+	?>
+
+		<div class="modal" id="modal-deletar" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Excluir Registro</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>Deseja realmente excluir este registro?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" id="btn-cancelar-excluir">Cancelar</button>
+						<form method="post">
+							<input type="hidden" id="id" name="id" value="<?php echo @$id ?>">
+							<button type="button" id="btn-deletar" name="btn-deletar" class="btn btn-danger">Excluir</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<?php
+	}
+	?>
+
+
+	<script>
+		$('#modal-deletar').modal("show");
+	</script>
+
+
 	<!--MASCARAS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 	<script src="../js/mascaras.js"></script>
@@ -276,6 +316,29 @@
 						}
 						$('#mensagem').text(mensagem)
 					}
+				})
+			})
+		})
+	</script>
+
+
+
+	<!--AJAX PARA EXLUIS DADOS -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			var pag = "<?= $pagina ?>";
+			$('#btn-deletar').click(function(event) {
+				event.preventDefault(); //Não permite atualização da página
+
+				$.ajax({
+					url: pag + "/excluir.php",
+					method: "post",
+					data: $('form').serialize(),
+					dataType: "text",
+					success: function(mensagem) {
+						$('#btn-fechar').click();
+					},
 				})
 			})
 		})

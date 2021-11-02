@@ -44,7 +44,7 @@ for ($i = 0; $i < count($dados); $i++) {
                     <td>' . $email . '</td>
                     <td>
                         <a href="index.php?acao=' . $pagina . '&funcao=editar&id=' . $id . '"><i class="fas fa-edit text-info"></i></a>
-                        <a href="#"><i class="far fa-trash-alt text-danger"></i></a>
+                        <a href="index.php?acao=' . $pagina . '&funcao=excluir&id=' . $id . '"><i class="far fa-trash-alt text-danger"></i></a>
                     </td>
                 </tr>';
 }
